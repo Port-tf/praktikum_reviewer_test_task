@@ -117,11 +117,14 @@ class CashCalculator(Calculator):
             currency_type = 'руб'
         if cash_remained > 0:
             return (
+# В f-строке функции не используем, преобразовываем в переменной
+# и ее передаем.
                 f'На сегодня осталось {round(cash_remained, 2)} '
                 f'{currency_type}'
             )
         elif cash_remained == 0:
             return 'Денег нет, держись'
+# Можно и использовать f-строку.
         elif cash_remained < 0:
             return 'Денег нет, держись:' \
                    ' твой долг - {0:.2f} {1}'.format(-cash_remained,
