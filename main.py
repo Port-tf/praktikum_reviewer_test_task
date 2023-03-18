@@ -102,6 +102,7 @@ class CashCalculator(Calculator):
 # Тогда все вычисления и преобразование фукцией round() можно производить в 102 строке.
         currency_type = currency
         cash_remained = self.limit - self.get_today_stats()
+# 
         if currency == 'usd':
             cash_remained /= USD_RATE
 # Если будет словарь, эту строчку можно убрать.
